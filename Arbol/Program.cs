@@ -1,13 +1,19 @@
-﻿int n = 1;
-while (n < 5)
+using System;
+					
+public class Program
 {
-	for (int i = 1; i <= n; i++)
+	public static void Main()
 	{
-			Console.Write(n);
+		int n=1;
+		for(int i = 0; i < 5; i++){
+			string fila= "";
+			for(int j = 1; j <= i; j++){
+				fila += n+" ";
+				n++;
+			}
+			fila = fila.Trim();
+			fila = ("           "+fila);
+			Console.WriteLine(fila.Substring(fila.Length-9,9));
+		}
 	}
-	n++;
-	Console.WriteLine();
 }
-
-
-
